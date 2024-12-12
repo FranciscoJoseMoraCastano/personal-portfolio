@@ -1,0 +1,304 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7f9;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar Styles */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Increase navbar height */
+    background-color: #2c3e50; /* Dark blue for navbar */
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    color: white;
+    padding: 20px 30px; /* Increase padding for larger links */
+    text-decoration: none;
+    font-size: 1.2rem; /* Increase font size */
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #34495e; /* Lighter blue on hover */
+}
+
+/* General Section */
+section {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    min-height: 100vh; /* Each section occupies at least 100% of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+/* Welcome Section */
+#welcome-section {
+    background-color: #bbd8f0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 100px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Ensure content is in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Main Title */
+#welcome-section h1 {
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 20px; /* Space between h1 and p */
+}
+
+/* Paragraph below the title */
+#welcome-section p {
+    font-size: 1.5rem;
+    color: #777;
+    max-width: 600px; /* Limit paragraph width to prevent excessive length */
+    margin: 0; /* Remove unnecessary margins */
+    font-style: italic;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #b5d5f0; /* Light blue background for the Projects section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column; /* Ensure elements inside this section are in a column */
+    align-items: center; /* Center elements within the section */
+    justify-content: center; /* Center content vertically within the section */
+    text-align: center; /* Center the text for the title */
+}
+
+.projects-section-header {
+    font-size: 3.5rem;
+    margin-bottom: 20px; /* Space below the title */
+    color: #333;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center grid items */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Prevent the grid from stretching too much on large screens */
+    width: 100%; /* Ensure it takes up the full available width */
+}
+
+.project-tile {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: auto; /* Fixed width for cards */
+    height: auto; /* Fixed height for cards */
+    display: flex; /* Use flexbox to center contents */
+    flex-direction: column; /* Place the image above and text below */
+    justify-content: center; /* Vertically center the image and text */
+    align-items: center; /* Horizontally center the image and text */
+    text-align: center;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Prevent overflow */
+    padding: 20px; /* Add spacing around the content */
+    gap: 15px; /* Space between the image and text */
+    text-decoration: none; /* Ensure the link is not underlined */
+}
+
+.project-tile:hover {
+    transform: translateY(-10px); /* Hover effect */
+}
+
+.project-tile img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: 200px; /* Fija una altura específica */
+    border-top: 9px solid #bbd8f0; /* Bordes superior e inferior */
+    border-bottom: 6px solid #bbd8f0;
+    object-fit: cover; /* Recorta la imagen para que encaje en las dimensiones especificadas */
+}
+
+.project-tile p {
+    padding: 5px 10px; /* Spacing around the text */
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0; /* Remove default margins */
+    text-decoration: none; /* Remove underline on the text link */
+    font-weight: bold;
+}
+
+.project-tile p:hover {
+    text-decoration: none; /* Prevent underline on hover */
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #bbd8f0;
+    padding: 50px 20px;
+}
+
+.contact-section-header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn.contact-details {
+    background-color: #3498db; /* Blue for contact buttons */
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn.contact-details:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.btn.contact-details i {
+    margin-right: 8px;
+}
+
+#contact-paragraph {
+    text-align: center; /* Center the text */
+    font-size: 2rem; /* Adjust text size as needed */
+    line-height: 1.5; /* Spacing between lines */
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+#contact-paragraph .line1,
+#contact-paragraph .line2 {
+    display: block; /* Each line in a separate block to ensure the break */
+    margin: 0; /* Remove extra margins */
+}
+
+#contact-paragraph .line1 {
+    font-weight: bold; /* Optional: style the lines differently */
+}
+
+#contact-paragraph .line2 {
+    color: #777; /* Example style for the second line */
+    font-style: italic;
+}
+
+.contact-links {
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #2c3e50; /* Dark blue for footer */
+    color: white;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    #navbar {
+        height: 100px; /* Increase navbar size on small screens */
+    }
+
+    .nav-link {
+        padding: 15px 20px; /* Adjust link size */
+        font-size: 1rem;
+    }
+
+    #welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-tile {
+        flex: 1 1 calc(50% - 20px); /* 2 tiles por fila en pantallas medianas */
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn.contact-details {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Media Query for Extra Small Screens */
+@media (max-width: 480px) {
+    #welcome-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .projects-section-header {
+        font-size: 1.5rem;
+    }
+
+    .projects-grid {
+        gap: 10px;
+    }
+
+    .project-tile {
+        flex: 1 1 100%; /* 1 tile por fila en pantallas pequeñas */
+    }
+
+    .project-tile p {
+        font-size: 1rem;
+    }
+
+    .btn.contact-details {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
